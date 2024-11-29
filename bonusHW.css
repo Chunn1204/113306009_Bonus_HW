@@ -1,0 +1,94 @@
+body, html {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    width: 100%; /* 表單寬度使用百分比 */
+    margin: 0 auto; /* 置中對齊 */
+    background: lightblue;
+    border-radius: 8px; /* 圓角邊框 */
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 60px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 0;
+    font-size: 40px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center; /* 垂直對齊 */
+    justify-content: flex-start; /* 讓標籤和輸入框靠左對齊 */
+      
+}
+
+.form-group label {
+    flex: 0 0 120px; /* 固定label寬度，避免過長的label擠壓input */
+    font-size: 16px;
+    text-align: right;
+    margin-right: 20px; /* 與輸入框的間距 */
+
+}
+
+.form-group input, .form-group textarea {
+    flex: 1; /* 輸入框占用剩餘空間 */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* 圓角邊框 */
+    font-size: 14px;
+    outline: none;
+    margin-bottom: 10px; /* 為所有 input 和 textarea 增加底部的外邊距 */
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #007BFF; /* 聚焦時的邊框顏色 */
+}
+
+.form-group textarea {
+    resize: none; /* 禁止調整大小 */
+    height: 80px; /* 固定高度 */
+}
+
+.form-group.image {
+    justify-content: flex-start; /* 圖片特例不需對齊 */
+}
+
+.form-group img {
+    max-width: 85%; /* 圖片自適應寬度 */
+    max-height: 40%;
+    border-radius: 5px; /* 圓角圖片 */
+}
+
+/* 新增的規則: 在input-row中對齊所有欄位 */
+.input-row {
+    display: flex; /* 使用 flex 排版 */
+    gap: 1  0px; /* 增加 input2 和 input3 之間的水平間距 */
+    align-items: center; /* 確保水平排布的元素上下居中 */
+
+}
+
+.input-row input {
+    flex: 0 0 45%; /* 設定input2 和 input3的寬度為 45% */
+    max-width: 45%;  /* 限制最大寬度，避免超過容器寬度 */
+    margin-left: auto; /* 推動元素到右邊 */
+    margin-right: auto;
+    flex: 1; /* 平均分配寬度 */
+}
+
+/* 讓 input2 和 input4 右對齊 */
+.input-right {
+    margin-left: auto; /* 推動元素到右邊 */
+}
